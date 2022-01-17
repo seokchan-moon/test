@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <style>
     @import url(https://fonts.googleapis.com/css?family=Electrolize);
     body {
       margin: 0;
@@ -27,6 +28,7 @@
       width: 5em;
       font-size: 60%;
     }
+    </style>
   </head>
   
   <body>
@@ -42,7 +44,7 @@
     };
     var inc = 0;
     var out = 0;
-    var str = 'Do The Type Shuffle...';
+    var str = 'A L I A S B E E...';
     var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@$%&';
     var t;
 
@@ -58,7 +60,7 @@
       $('shuffle').innerHTML =
         chars[Math.floor(Math.random() * chars.length)];
     };
-    t = setInterval(anim, 50);
+    t = setInterval(anim, 30);
     $('anim').innerHTML = '';
 
     //Do it again
