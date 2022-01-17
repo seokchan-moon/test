@@ -17,7 +17,15 @@
 
     p {
       width: 100%;
+      font-size: 4em;
       text-align: center;
+      margin: 15% auto;
+    }
+
+    div {
+      width: 100%;
+      font-size: 1em;
+      text-align: right;
       margin: 15% auto;
     }
 
@@ -35,6 +43,10 @@
     <p>
       <span id="anim"></span><span id="shuffle"></span>
     </p>
+
+    <div>
+        admin@aliasbee.com
+    </div>
   </body>
 
 
@@ -44,7 +56,7 @@
     };
     var inc = 0;
     var out = 0;
-    var str = 'A L I A S B E E...';
+    var str = 'A L I A S B E E';
     var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@$%&';
     var t;
 
@@ -55,8 +67,11 @@
         out++;
       } else if (out >= str.length) {
         $('shuffle').innerHTML = '';
-        removeInterval(t);
+        console.log('test')
+        clearInterval(t);
       }
+
+      if( str[out] == undefined ) return;
       $('shuffle').innerHTML =
         chars[Math.floor(Math.random() * chars.length)];
     };
@@ -67,6 +82,6 @@
     function reload() {
       window.location.href = window.location.href;
     }
-    document.getElementById('btn').onclick = reload;
+    //document.getElementById('btn').onclick = reload;
   </script>
 </html>
